@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Qwench\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-12-16 11:49+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Jérôme <jerome.deville@free.fr>\n"
+"Language-Team: Jerome <jerome.deville@free.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-Basepath: c:\\wamp\\www\\qwench\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: controllers/questions.php:652
+msgid "Add Comment"
+msgstr "Add comment"
+
+#: controllers/questions.php:664
+msgid "Your comment must be atleast 10 characters in length"
+msgstr "Your comment must be atleast 10 characters in length"
+
+#: controllers/questions.php:673
+msgid "Your comment is too long, please reduce it to 600 characters"
+msgstr "Your comment is too long, please reduce it to 600 characters"
+
+#: controllers/questions.php:687
+msgid "Please login to post a comment"
+msgstr "Please login to post a comment"
+
+#: controllers/questions.php:727
+msgid "Please login to vote"
+msgstr "Please login to vote"
+
+#: controllers/questions.php:746
+msgid "You cannot up/down vote your own question"
+msgstr "You cannot up/down vote your own question"
+
+#: controllers/questions.php:797
+msgid "Thankyou for voting"
+msgstr "Thankyou for voting"
+
+#: controllers/questions.php:805
+msgid "Please login to add a question to your favorites"
+msgstr "Please login to add a question to your favorites"
+
+#: controllers/questions.php:818
+msgid "Question removed from your favorites"
+msgstr "Question removed from your favorites"
+
+#: controllers/questions.php:823
+msgid "Question added to your favorites"
+msgstr "Question added to your favorites"
+
+#: controllers/questions.php:883
+msgid "not yet answered"
+msgstr "not yet answered"
+
+#: controllers/questions.php:886
+msgid "active"
+msgstr "active"
+
+#: controllers/questions.php:901
+msgid "showing"
+msgstr "showing"
+
+#: controllers/questions.php:916
+msgid "tagged"
+msgstr "tagged"
+
+#: libraries/timeago.php:5
+msgid "0 seconds ago"
+msgstr "0 seconds ago"
+
+#: libraries/timeago.php:8
+msgid "week"
+msgstr "week"
+
+#: libraries/timeago.php:8
+msgid "day"
+msgstr "day"
+
+#: libraries/timeago.php:8
+msgid "hr"
+msgstr "hr"
+
+#: libraries/timeago.php:8
+msgid "min"
+msgstr "min"
+
+#: libraries/timeago.php:8
+msgid "sec"
+msgstr "sec"
+
+#: libraries/timeago.php:24
+msgid "0 seconds"
+msgstr "0 seconds"
+
+#: libraries/timeago.php:24
+msgid "ago"
+msgstr "ago"
+
+#: views/footer.php:9
+msgid "Edit Profile"
+msgstr "Edit Profile"
+
+#: views/footer.php:10
+msgid "Logout"
+msgstr "Logout"
+
+#: views/footer.php:17
+msgid "E-mail"
+msgstr "E-mail"
+
+#: views/footer.php:19
+msgid "Password"
+msgstr "Password"
+
+#: views/footer.php:22
+msgid "Login"
+msgstr "Login"
+
+#: views/footer.php:22
+msgid "or"
+msgstr "or"
+
+#: views/footer.php:22
+msgid "click here to register"
+msgstr "click here to register"
+
+#: views/footer.php:33
+msgid "Powered by Qwench"
+msgstr "Powered by Qwench"
+
+#: views/header.php:28
+msgid "Home"
+msgstr "Home"
+
+#: views/header.php:28
+msgid "Questions"
+msgstr "Questions"
+
+#: views/header.php:28
+#: views/questions/ask.php:58
+msgid "Tags"
+msgstr "Tags"
+
+#: views/header.php:28
+msgid "Users"
+msgstr "Users"
+
+#: views/header.php:28
+msgid "Unanswered"
+msgstr "Unanswered"
+
+#: views/header.php:28
+msgid "Ask or Contribute"
+msgstr "Ask or Contribute"
+
+#: views/answers/edit.php:13
+msgid "Update Answer"
+msgstr "Update Answer"
+
+#: views/questions/ask.php:7
+msgid "Contribute"
+msgstr "Contribute"
+
+#: views/questions/ask.php:9
+#: views/questions/ask.php:63
+msgid "Ask Question"
+msgstr "Ask Question"
+
+#: views/questions/ask.php:22
+msgid "Your title must be at least 15 characters in length"
+msgstr "Your title must be at least 15 characters in length"
+
+#: views/questions/ask.php:31
+msgid "Your description must be at least 15 characters in length"
+msgstr "Your description must be at least 15 characters in length"
+
+#: views/questions/ask.php:44
+msgid "What would you like to ask or contribute ?"
+msgstr "What would you like to ask or contribute ?"
+
+#: views/questions/ask.php:55
+msgid "Share a Link"
+msgstr "Share a Link"
+
+#: views/questions/ask.php:61
+msgid "Make this a knowledge-base article"
+msgstr "Make this a knowledge-base article"
+
+#: views/questions/cache.php:3
+msgid "Cached Version of"
+msgstr "Cached Version of"
+
+#: views/questions/edit.php:34
+msgid "Edit Your Question"
+msgstr "Edit Your Question"
+
+#: views/questions/edit.php:57
+msgid "Update"
+msgstr "Update"
+
+#: views/questions/index.php:1
+msgid "Question"
+msgid_plural "Questions"
+msgstr[0] "Question"
+msgstr[1] "Questions"
+
+#: views/questions/index.php:30
+msgid "cmts"
+msgstr "cmts"
+
+#: views/questions/index.php:30
+#: views/questions/index.php:34
+msgid "votes"
+msgstr "votes"
+
+#: views/questions/index.php:34
+msgid "ans"
+msgstr "ans"
+
+#: views/questions/index.php:70
+msgid "Sorry, we could not find what you were looking for. You may want to have a look at"
+msgstr "Sorry, we could not find what you were looking for. You may want to have a look at"
+
+#: views/questions/index.php:70
+msgid "tags"
+msgstr "tags"
+
+#: views/questions/view.php:9
+msgid "Your"
+msgstr "Your"
+
+#: views/questions/view.php:9
+msgid "comment"
+msgstr "comment"
+
+#: views/questions/view.php:9
+msgid "answer"
+msgstr "answer"
+
+#: views/questions/view.php:9
+msgid "must be atleast 15 characters in length"
+msgstr "must be atleast 15 characters in length"
+
+#: views/questions/view.php:31
+#: views/questions/view.php:120
+msgid "edit"
+msgstr "edit"
+
+#: views/questions/view.php:76
+#: views/questions/view.php:165
+msgid "Add comment"
+msgstr "Add comment"
+
+#: views/questions/view.php:102
+msgid "Comment"
+msgid_plural "Comments"
+msgstr[0] "Comment"
+msgstr[1] "Comments"
+
+#: views/questions/view.php:102
+msgid "Answer"
+msgid_plural "Answers"
+msgstr[0] "Answer"
+msgstr[1] "Answers"
+
+#: views/questions/view.php:126
+msgid "Accepted Answer"
+msgstr "Accepted Answer"
+
+#: views/questions/view.php:130
+msgid "Accept this answer"
+msgstr "Accept this answer"
+
+#: views/questions/view.php:188
+msgid "No comments on this article as yet."
+msgstr "No comments on this article as yet."
+
+#: views/questions/view.php:188
+msgid "No answers as yet. Be the first to write an answer."
+msgstr "No answers as yet. Be the first to write an answer."
+
+#: views/questions/view.php:194
+msgid "Add a comment"
+msgstr "Add a comment"
+
+#: views/questions/view.php:194
+#: views/questions/view.php:204
+msgid "Answer Question"
+msgstr "Answer Question"
+
+#: views/tags/index.php:1
+#, php-format
+msgid "%d Tag"
+msgid_plural "%d Tags"
+msgstr[0] "%d Tag"
+msgstr[1] "%d Tags"
+
+#: views/users/edit.php:14
+#: views/users/register.php:14
+msgid "Please enter your name"
+msgstr "Please enter your name"
+
+#: views/users/edit.php:23
+#: views/users/register.php:23
+msgid "Please enter your e-mail"
+msgstr "Please enter your e-mail"
+
+#: views/users/edit.php:39
+#: views/users/register.php:49
+msgid "Name"
+msgstr "Name"
+
+#: views/users/edit.php:45
+msgid "Leave blank if you do not want to update"
+msgstr "Leave blank if you do not want to update"
+
+#: views/users/edit.php:49
+msgid "Update Profile"
+msgstr "Update Profile"
+
+#: views/users/index.php:1
+#, php-format
+msgid "%d User"
+msgid_plural "%d Users"
+msgstr[0] "%d User"
+msgstr[1] "%d Users"
+
+#: views/users/logout.php:1
+msgid "You have successfully logged out"
+msgstr "You have successfully logged out"
+
+#: views/users/register.php:33
+msgid "Please enter your password"
+msgstr "Please enter your password"
+
+#: views/users/register.php:47
+#: views/users/register.php:59
+msgid "Register"
+msgstr "Register"
+
+#: views/users/view.php:3
+msgid "Points"
+msgstr "Points"
+
