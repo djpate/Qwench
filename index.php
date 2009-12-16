@@ -26,6 +26,7 @@ if (!empty($path[1])) { $action = $path[1]; if ($_GET['type'] == "active") { $_G
 /* Include Libraries */
 
 include_once ROOT.DS.'config.php';
+include_once ROOT.DS.'localize.php';
 include_once ROOT.DS.'libraries'.DS.'template.class.php';
 include_once ROOT.DS.'libraries'.DS.'helper.class.php';
 

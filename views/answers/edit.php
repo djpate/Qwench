@@ -10,5 +10,5 @@
  
 <br/><br/>
 <input type="hidden" name="id" value="<?php echo $answerid;?>">
-<input type="submit" value="Update Answer" class="button">
+<input type="submit" value="<?php echo _("Update Answer"); ?>" class="button">
 </form>

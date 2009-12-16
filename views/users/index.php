@@ -1,5 +1,4 @@
-<h1><?php echo $count;?> Users</h1>
-
+<h1><?php printf(ngettext("%d User", "%d Users", $count), $count); ?></h1>
 <div style="clear:both"></div>
 
 <div class="tags_list">

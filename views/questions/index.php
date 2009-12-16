@@ -1,4 +1,4 @@
-<h1><?php if($nopagination != 1):?><?php echo $questionscount;?> <?php endif;?>Questions <i><?php echo $extratitle;?></i></h1>
+<h1><?php if($nopagination != 1):?><?php echo $questionscount;?> <?php endif;?><?php echo ngettext("Question", "Questions", $questionscount); ?> <i><?php echo $extratitle;?></i></h1>
 
 <div style="clear:both"></div>
 <?php if ($questionscount != 0):?>
@@ -27,11 +27,11 @@
  
 <?php if ($question['kb']):?>
 <div class="questionsview_details">
-<?php echo $question['answers'];?> cmts | <?php echo $question['votes'];?> votes
+<?php echo $question['answers'];?> <?php echo _("cmts"); ?> | <?php echo $question['votes'];?> <?php echo _("votes"); ?>
 </div>
 <?php else:?>
 <div class="questionsview_details q">
-<?php echo $question['answers'];?> ans | <?php echo $question['votes'];?> votes
+<?php echo $question['answers'];?> <?php echo _("ans"); ?> | <?php echo $question['votes'];?> <?php echo _("votes"); ?>
 </div>
 <?php endif;?>
 
@@ -67,4 +67,4 @@
 </div> 
 <?php endif;?>
 
-<?php else:?><h3>Sorry, we could not find what you were looking for. You may want to have a look at <a href="<?php echo basePath();?>/tags">tags</a>.</h3><?php endif;?>
+<?php else:?><h3><?php echo _("Sorry, we could not find what you were looking for. You may want to have a look at"); ?> <a href="<?php echo basePath();?>/tags"><?php echo _("tags"); ?></a>.</h3><?php endif;?>

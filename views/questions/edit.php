@@ -9,7 +9,7 @@ function cform() {
 
 	if (title.length < 15) {
 		$("#title").addClass('textalert');
-		$.fancyalert('Your title must be atleast 15 characters in length');
+		$.fancyalert('<?php echo _("Your title must be at least 15 characters in length"); ?>');
 		$("#title").focus();
 		return false;
 	} else {
@@ -18,7 +18,7 @@ function cform() {
 
 	if (description.length < 15) {
 		$("#wmd-input").addClass('textalert');
-		$.fancyalert('Your description must be atleast 15 characters in length');
+		$.fancyalert('<?php echo _("Your description must be at least 15 characters in length"); ?>');
 		$("#wmd-input").focus();
 		return false;
 	} else {
@@ -31,7 +31,7 @@ function cform() {
 
 <form action="<?php echo generateLink("questions","update");?>" method="post" onsubmit="javascript:return cform();">
 
-<h1>Edit Your Question</h1>
+<h1><?php echo _("Edit Your Question"); ?></h1>
 <input type="textbox" class="textbox" name="title" id="title" value="<?php echo $title;?>"/><br/>
 
 <div id="wmd-editor" class="wmd-panel" style="padding-top:20px">
@@ -41,18 +41,18 @@ function cform() {
 <div id="wmd-preview" class="markdown"></div>
  
 
-<h3 style="padding-top:20px">Share a Link</h3>
+<h3 style="padding-top:20px"><?php echo _("Share a Link"); ?></h3>
 <input type="textbox" class="textbox" name="link" id="link" value="<?php echo $link;?>"/><br/>
 
-<h3>Tags</h3>
+<h3><?php echo _("Tags"); ?></h3>
 <select class="textbox" name="tags" id="tags"/>
 <?php foreach ($tags as $tag):?>
 <option value="<?php echo $tag;?>" class="selected"><?php echo $tag;?></option>
 <?php endforeach;?>
 </select>
 <br/>
-<input type="checkbox" id="answercheck" name="answercheck" value="1" tabindex="4" <?php if ($kb) { echo "checked"; }?>> Make this a knowledge-base article
+<input type="checkbox" id="answercheck" name="answercheck" value="1" tabindex="4" <?php if ($kb) { echo "checked"; }?>> <?php echo _("Make this a knowledge-base article"); ?>
 <br/><br/>
 <input type="hidden" name="id" value="<?php echo $questionid;?>">
-<input type="submit" value="Update" class="button">
+<input type="submit" value="<?php echo _("Update"); ?>" class="button">
 </form>

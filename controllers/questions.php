@@ -647,7 +647,11 @@ EOD;
 });
 
 function comment(id) {
-	$("#comment_"+id).html("<textarea class=\"commenttextarea\" id='commenttext_"+id+"'></textarea><input class=\"smallbutton\" type=\"submit\" value=\"Add Comment\" onclick=\"addcomment('"+id+"')\"/>");
+	$("#comment_"+id).html("<textarea class=\"commenttextarea\" id='commenttext_"+id+"'></textarea><input class=\"smallbutton\" type=\"submit\" value=\"
+EOD;
+$js .= _("Add Comment");
+$js .= <<<EOD
+\" onclick=\"addcomment('"+id+"')\"/>");
 }
 
 function addcomment(id) {
@@ -655,12 +659,20 @@ function addcomment(id) {
 		var comment = $("#commenttext_"+id).val();
 
 		if (comment.length < 10) {
-			$.fancyalert('Your comment must be atleast 10 characters in length');
+			$.fancyalert('
+EOD;
+$js .= _("Your comment must be atleast 10 characters in length");
+$js .= <<<EOD
+');
 			return;
 		}
 
 		if (comment.length > 600) {
-			$.fancyalert('Your comment is too long, please reduce it to 600 characters');
+			$.fancyalert('
+EOD;
+$js .= _("Your comment is too long, please reduce it to 600 characters");
+$js .= <<<EOD
+');
 			return;
 		}
 
@@ -670,7 +682,11 @@ function addcomment(id) {
 			function(data) {
 				if (data == 0) {
 					$("#commenttext_"+id).val(comment);
-					$.fancyalert('Please login to post a comment');					
+					$.fancyalert('
+EOD;
+$js .= _("Please login to post a comment");
+$js .= <<<EOD
+');					
 				} else {
 					$("#comments_"+id).append(data);
 				}
@@ -708,7 +724,7 @@ function cache() {
 
 function vote() {
 	if ($_SESSION['userid'] == '') {
-		echo "0Please login to vote";
+		echo "0"._("Please login to vote");
 		exit;
 	}
 
@@ -727,7 +743,7 @@ function vote() {
 	$question = mysql_fetch_array($query);
 
 	if ($question['userid'] == $_SESSION['userid']) {
-		echo "0"."You cannot up/down vote your own question";
+		echo "0"._("You cannot up/down vote your own question");
 		exit;
 	}
 
@@ -778,7 +794,7 @@ function vote() {
 	$sql_nest = ("update questions set votes = votes".escape($vote)." where id = '".escape($id)."'");
 	$query_nest = mysql_query($sql_nest);
 	
-	echo "1Thankyou for voting";
+	echo "1"._("Thankyou for voting");
 	exit;
 
 }
@@ -786,7 +802,7 @@ function vote() {
 function fave() {
 
 	if ($_SESSION['userid'] == '') {
-		echo "0Please login to add a question to your favorites";
+		echo "0"._("Please login to add a question to your favorites");
 		exit;
 	}
 
@@ -799,12 +815,12 @@ function fave() {
 	if ($result['id'] > 0) { 
 		$sql = ("delete from favorites where questionid = '".escape($id)."' and userid = '".escape($_SESSION['userid'])."'");
 		$query = mysql_query($sql);
-		echo "1Question removed from your favorites";
+		echo "1"._("Question removed from your favorites");
 
 	} else {
 		$sql = ("insert into favorites (questionid,userid) values ('".escape($id)."','".escape($_SESSION['userid'])."')");
 		$query = mysql_query($sql);
-		echo "1Question added to your favorites";
+		echo "1"._("Question added to your favorites");
 	}
 
 	
@@ -822,7 +838,7 @@ function index() {
 	$extratitle = '';
 
 	
-	$orderby = 'newest';
+	$orderby = "newest";
 	$order = 'created desc';
 	$defaultorder = 1;
 	$nopagination = 0;
@@ -864,10 +880,10 @@ function index() {
 		if (sanitize($_GET['type'],"string") == "unanswered") {
 		//	$conditionspost .= " questions.id NOT IN (select questions.id from questions,answers where questions.id = answers.questionid and answers.accepted = 1) and ";
 			$conditionspost .= " questions.accepted = 0 and questions.kb = 0 and ";
-			$extratitle = " not yet answered";
+			$extratitle = " "._("not yet answered");
 
 		} else {
-			$extratitle = " active";
+			$extratitle = " "._("active");
 			$order = " updated desc ";
 			$nopagination = 1;
 		}
@@ -882,9 +898,9 @@ function index() {
 		$search = "&search=".urlencode($searchstring);
 		$conditionspost .= " MATCH(title, description) AGAINST ('".escape($searchstring)."') and ";
 		$conditionsselect .= ",MATCH(title, description) AGAINST ('".escape($searchstring)."') AS score  ";
-		$extratitle = " showing ".$searchstring;
+		$extratitle = " "._("showing")." ".$searchstring;
 		if ($defaultorder == 1) {
-			$orderby = 'relevance';
+			$orderby = "relevance";
 			$order = 'score desc';
 		}
 	}
@@ -897,7 +913,7 @@ function index() {
 		$tag = "&tag=".createSlug($_GET['tag']);
 		$conditionspre .= ",tags_questions, tags";
 		$conditionspost .= " tags_questions.questionid = questions.id and tags.id = tags_questions.tagid and tags.tag LIKE '".escape(createSlug($_GET['tag']))."' and ";
-		$extratitle = " tagged ".createSlug($_GET['tag']);
+		$extratitle = " "._("tagged")." ".createSlug($_GET['tag']);
 	}
 
 	$offset = ($page-1)*QUESTIONS_PER_PAGE;

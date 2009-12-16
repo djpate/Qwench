@@ -4,9 +4,9 @@ function fanswer() {
 	var checked = $('#answercheck').attr('checked')?1:0;
 
 	if (checked == 1) {
-		$("#askquestion").val('Contribute');
+		$("#askquestion").val('<?php echo _("Contribute"); ?>');
 	} else {
-		$("#askquestion").val('Ask Question');
+		$("#askquestion").val('<?php echo _("Ask Question"); ?>');
 	}
 }
 
@@ -19,7 +19,7 @@ function cform() {
 
 	if (title.length < 15) {
 		$("#title").addClass('textalert');
-		$.fancyalert('Your title must be atleast 15 characters in length');
+		$.fancyalert('<?php echo _("Your title must be at least 15 characters in length"); ?>');
 		$("#title").focus();
 		return false;
 	} else {
@@ -28,7 +28,7 @@ function cform() {
 
 	if (description.length < 15) {
 		$("#wmd-input").addClass('textalert');
-		$.fancyalert('Your description must be atleast 15 characters in length');
+		$.fancyalert('<?php echo _("Your description must be at least 15 characters in length"); ?>');
 		$("#wmd-input").focus();
 		return false;
 	} else {
@@ -41,7 +41,7 @@ function cform() {
 
 <form action="<?php echo generateLink("questions","post");?>" method="post" onsubmit="javascript:return cform();">
 
-<h1>What would you like to ask or contribute?</h1>
+<h1><?php echo _("What would you like to ask or contribute ?"); ?></h1>
 <input type="textbox" class="textbox" name="title" id="title" tabindex="1"/><br/>
  
 
@@ -52,13 +52,13 @@ function cform() {
 <div id="wmd-preview" class="markdown"></div>
  
 
-<h3 style="padding-top:20px">Share a Link</h3>
+<h3 style="padding-top:20px"><?php echo _("Share a Link"); ?></h3>
 <input type="textbox" class="textbox" name="link" id="link" tabindex="3"/><br/>
 
-<h3>Tags</h3>
+<h3><?php echo _("Tags"); ?></h3>
 <select class="textbox" name="tags" id="tags" tabindex="4"/></select>
 <br/>
-<input type="checkbox" id="answercheck" name="answercheck" value="1" onclick="fanswer();" tabindex="4"> Make this a knowledge-base article
+<input type="checkbox" id="answercheck" name="answercheck" value="1" onclick="fanswer();" tabindex="4"> <?php echo _("Make this a knowledge-base article"); ?>
 <br/><br/>
-<input type="submit" value="Ask Question" class="button" id="askquestion" tabindex="5">
+<input type="submit" value="<?php echo _("Ask Question"); ?>" class="button" id="askquestion" tabindex="5">
 </form>

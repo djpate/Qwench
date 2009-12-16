@@ -90,8 +90,9 @@ class Pagination{
 
 
      function generate_seclink($label){
+       $textlabel = _($label);
        $url = str_replace('%label%',$label,$this->options['urlscheme']);
-       $html = "<a ".(($this->options['focusedclass']!='' && $label == $this->options['order'])?"class=\"{$this->options['focusedclass']}\" ":"")."href=\"{$url}\">{$label}</a>";
+       $html = "<a ".(($this->options['focusedclass']!='' && $label == $this->options['order'])?"class=\"{$this->options['focusedclass']}\" ":"")."href=\"{$url}\">{$textlabel}</a>";
        return $html;
    }
 }
