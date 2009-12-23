@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qwench\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-16 11:49+0100\n"
+"POT-Creation-Date: 2009-12-23 13:11+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jérôme <jerome.deville@free.fr>\n"
 "Language-Team: jerome <jerome.deville@free.fr>\n"
@@ -14,6 +14,44 @@ msgstr ""
 "X-Poedit-Basepath: c:\\wamp\\www\\qwench\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: localize.php:10
+msgid "votes"
+msgstr "votes"
+
+#: localize.php:11
+msgid "newest"
+msgstr "récent"
+
+#: localize.php:12
+msgid "oldest"
+msgstr "ancien"
+
+#: controllers/answers.php:107
+msgid "You cannot up/down vote your own answer"
+msgstr "Vous ne pouvez pas voter pour votre propre question"
+
+#: controllers/answers.php:158
+#: controllers/questions.php:797
+msgid "Thankyou for voting"
+msgstr "Merci pour le vote"
+
+#: controllers/comments.php:25
+msgid "An error has occurred. Please try again later"
+msgstr "Erreur, essayez ult&#233;rieurement"
+
+#: controllers/comments.php:47
+#: controllers/questions.php:727
+msgid "Please login to vote"
+msgstr "Connectez vous pour voter"
+
+#: controllers/comments.php:58
+msgid "You cannot upvote your own comment"
+msgstr "Vous ne pouvez pas voter pour votre propre question"
+
+#: controllers/comments.php:95
+msgid "Comment successfully deleted"
+msgstr "Commentaire supprim&#233;"
 
 #: controllers/questions.php:652
 msgid "Add Comment"
@@ -31,17 +69,9 @@ msgstr "Votre commentaire est trop long, maximum 600 caractères"
 msgid "Please login to post a comment"
 msgstr "Connectez vous pour poster un commentaire"
 
-#: controllers/questions.php:727
-msgid "Please login to vote"
-msgstr "Connectez vous pour voter"
-
 #: controllers/questions.php:746
 msgid "You cannot up/down vote your own question"
 msgstr "Vous ne pouvez pas voter pour votre propre question"
-
-#: controllers/questions.php:797
-msgid "Thankyou for voting"
-msgstr "Merci pour le vote"
 
 #: controllers/questions.php:805
 msgid "Please login to add a question to your favorites"
@@ -215,11 +245,6 @@ msgstr[1] "Questions"
 msgid "cmts"
 msgstr "coms"
 
-#: views/questions/index.php:30
-#: views/questions/index.php:34
-msgid "votes"
-msgstr "votes"
-
 #: views/questions/index.php:34
 msgid "ans"
 msgstr "rép"
@@ -349,10 +374,6 @@ msgstr "Enregistrement"
 msgid "Points"
 msgstr "Points"
 
-#~ msgid "newest"
-#~ msgstr "récent"
-#~ msgid "oldest"
-#~ msgstr "ancien"
 #~ msgid "relevance"
 #~ msgstr "pertinence"
 

@@ -104,7 +104,7 @@ function vote() {
 	$answer = mysql_fetch_array($query);
 
 	if ($answer['userid'] == $_SESSION['userid']) {
-		echo "0"."You cannot up/down vote your own answer";
+		echo "0"._("You cannot up/down vote your own answer");
 		exit;
 	}
 
@@ -155,7 +155,7 @@ function vote() {
 	$sql_nest = ("update answers set votes = votes".escape($vote)." where id = '".escape($id)."'");
 	$query_nest = mysql_query($sql_nest);
 	
-	echo "1Thankyou for voting";
+	echo "1"._("Thankyou for voting");
 	exit;
 
 }

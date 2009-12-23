@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qwench\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-16 11:49+0100\n"
+"POT-Creation-Date: 2009-12-23 13:11+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jérôme <jerome.deville@free.fr>\n"
 "Language-Team: Jerome <jerome.deville@free.fr>\n"
@@ -14,6 +14,44 @@ msgstr ""
 "X-Poedit-Basepath: c:\\wamp\\www\\qwench\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: localize.php:10
+msgid "votes"
+msgstr "votes"
+
+#: localize.php:11
+msgid "newest"
+msgstr "newest"
+
+#: localize.php:12
+msgid "oldest"
+msgstr "oldest"
+
+#: controllers/answers.php:107
+msgid "You cannot up/down vote your own answer"
+msgstr "You cannot up/down vote your own answer"
+
+#: controllers/answers.php:158
+#: controllers/questions.php:797
+msgid "Thankyou for voting"
+msgstr "Thankyou for voting"
+
+#: controllers/comments.php:25
+msgid "An error has occurred. Please try again later"
+msgstr "An error has occurred. Please try again later"
+
+#: controllers/comments.php:47
+#: controllers/questions.php:727
+msgid "Please login to vote"
+msgstr "Please login to vote"
+
+#: controllers/comments.php:58
+msgid "You cannot upvote your own comment"
+msgstr "You cannot upvote your own comment"
+
+#: controllers/comments.php:95
+msgid "Comment successfully deleted"
+msgstr "Comment successfully deleted"
 
 #: controllers/questions.php:652
 msgid "Add Comment"
@@ -31,17 +69,9 @@ msgstr "Your comment is too long, please reduce it to 600 characters"
 msgid "Please login to post a comment"
 msgstr "Please login to post a comment"
 
-#: controllers/questions.php:727
-msgid "Please login to vote"
-msgstr "Please login to vote"
-
 #: controllers/questions.php:746
 msgid "You cannot up/down vote your own question"
 msgstr "You cannot up/down vote your own question"
-
-#: controllers/questions.php:797
-msgid "Thankyou for voting"
-msgstr "Thankyou for voting"
 
 #: controllers/questions.php:805
 msgid "Please login to add a question to your favorites"
@@ -214,11 +244,6 @@ msgstr[1] "Questions"
 #: views/questions/index.php:30
 msgid "cmts"
 msgstr "cmts"
-
-#: views/questions/index.php:30
-#: views/questions/index.php:34
-msgid "votes"
-msgstr "votes"
 
 #: views/questions/index.php:34
 msgid "ans"

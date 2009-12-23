@@ -22,7 +22,7 @@ function post() {
 	$comment = sanitize($_POST['comment'],"comment");
 
 	if (strlen($comment) < 10 || strlen($comment) > 600) {
-		echo "0An error has occurred. Please try again later";
+		echo "0"._("An error has occurred. Please try again later");
 		exit;
 	}
 	
@@ -44,7 +44,7 @@ function post() {
 
 function vote() {
 	if ($_SESSION['userid'] == '') {
-		echo "0Please login to vote";
+		echo "0"._("Please login to vote");
 		exit;
 	}
 
@@ -55,7 +55,7 @@ function vote() {
 	$comment = mysql_fetch_array($query);
 
 	if ($comment['userid'] == $_SESSION['userid']) {
-		echo "0You cannot upvote your own comment";
+		echo "0"._("You cannot upvote your own comment");
 		exit;
 	}
 
@@ -92,7 +92,7 @@ function del() {
 	$sql = ("delete from comments where id = '".escape($id)."' and userid = '".escape($_SESSION['userid'])."'");
 	$query = mysql_query($sql);
 
-	echo "1Comment successfully deleted";
+	echo "1"._("Comment successfully deleted");
 	exit;
 
 }
