@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qwench\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-23 13:11+0100\n"
+"POT-Creation-Date: 2009-12-23 14:52+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jérôme <jerome.deville@free.fr>\n"
 "Language-Team: jerome <jerome.deville@free.fr>\n"
@@ -21,7 +21,7 @@ msgstr "votes"
 
 #: localize.php:11
 msgid "newest"
-msgstr "récent"
+msgstr "r&#233;cent"
 
 #: localize.php:12
 msgid "oldest"
@@ -32,7 +32,7 @@ msgid "You cannot up/down vote your own answer"
 msgstr "Vous ne pouvez pas voter pour votre propre question"
 
 #: controllers/answers.php:158
-#: controllers/questions.php:797
+#: controllers/questions.php:782
 msgid "Thankyou for voting"
 msgstr "Merci pour le vote"
 
@@ -41,7 +41,7 @@ msgid "An error has occurred. Please try again later"
 msgstr "Erreur, essayez ult&#233;rieurement"
 
 #: controllers/comments.php:47
-#: controllers/questions.php:727
+#: controllers/questions.php:712
 msgid "Please login to vote"
 msgstr "Connectez vous pour voter"
 
@@ -53,53 +53,65 @@ msgstr "Vous ne pouvez pas voter pour votre propre question"
 msgid "Comment successfully deleted"
 msgstr "Commentaire supprim&#233;"
 
-#: controllers/questions.php:652
+#: controllers/questions.php:574
+msgid "Delete this comment?"
+msgstr "Supprimer ce commentaire ?"
+
+#: controllers/questions.php:607
+msgid "View all comments"
+msgstr "Voir tous les commentaires"
+
+#: controllers/questions.php:611
+msgid "more"
+msgstr "de plus"
+
+#: controllers/questions.php:639
 msgid "Add Comment"
 msgstr "Ajouter un commentaire"
 
-#: controllers/questions.php:664
+#: controllers/questions.php:649
 msgid "Your comment must be atleast 10 characters in length"
-msgstr "Le commentaire doit faire au moins 10 caractères"
+msgstr "Le commentaire doit faire au moins 10 caract&#232;res"
 
-#: controllers/questions.php:673
+#: controllers/questions.php:658
 msgid "Your comment is too long, please reduce it to 600 characters"
-msgstr "Votre commentaire est trop long, maximum 600 caractères"
+msgstr "Votre commentaire est trop long, maximum 600 caract&#232;res"
 
-#: controllers/questions.php:687
+#: controllers/questions.php:672
 msgid "Please login to post a comment"
 msgstr "Connectez vous pour poster un commentaire"
 
-#: controllers/questions.php:746
+#: controllers/questions.php:731
 msgid "You cannot up/down vote your own question"
 msgstr "Vous ne pouvez pas voter pour votre propre question"
 
-#: controllers/questions.php:805
+#: controllers/questions.php:790
 msgid "Please login to add a question to your favorites"
 msgstr "Connectez vous pour ajouter un favori"
 
-#: controllers/questions.php:818
+#: controllers/questions.php:803
 msgid "Question removed from your favorites"
-msgstr "Question supprimée de vos favoris"
+msgstr "Question supprim&#233;e de vos favoris"
 
-#: controllers/questions.php:823
+#: controllers/questions.php:808
 msgid "Question added to your favorites"
-msgstr "Question ajoutée à vos favoris"
+msgstr "Question ajout&#233;e à vos favoris"
 
-#: controllers/questions.php:883
+#: controllers/questions.php:864
 msgid "not yet answered"
-msgstr "sans réponse"
+msgstr "sans r&#233;ponse"
 
-#: controllers/questions.php:886
+#: controllers/questions.php:867
 msgid "active"
 msgstr "en cours"
 
-#: controllers/questions.php:901
+#: controllers/questions.php:882
 msgid "showing"
 msgstr "contient"
 
-#: controllers/questions.php:916
+#: controllers/questions.php:897
 msgid "tagged"
-msgstr "marqué"
+msgstr "marqu&#233;"
 
 #: libraries/timeago.php:5
 msgid "0 seconds ago"
@@ -139,7 +151,7 @@ msgstr "Editer le profil"
 
 #: views/footer.php:10
 msgid "Logout"
-msgstr "Deconnexion"
+msgstr "D&#233;connexion"
 
 #: views/footer.php:17
 msgid "E-mail"
@@ -163,7 +175,7 @@ msgstr "Cliquer ici pour s'enregistrer"
 
 #: views/footer.php:33
 msgid "Powered by Qwench"
-msgstr "Propulsé par Qwench"
+msgstr "Propuls&#233; par Qwench"
 
 #: views/header.php:28
 msgid "Home"
@@ -184,15 +196,19 @@ msgstr "Utilisateurs"
 
 #: views/header.php:28
 msgid "Unanswered"
-msgstr "Non résolus"
+msgstr "Non r&#233;solus"
 
 #: views/header.php:28
 msgid "Ask or Contribute"
 msgstr "Poser une question"
 
+#: views/answers/edit.php:3
+msgid "Edit Your Answer"
+msgstr "Editer votre r&#233;ponse"
+
 #: views/answers/edit.php:13
 msgid "Update Answer"
-msgstr "Mise à jour réponse"
+msgstr "Mise à jour r&#233;ponse"
 
 #: views/questions/ask.php:7
 msgid "Contribute"
@@ -205,11 +221,11 @@ msgstr "Poser votre question"
 
 #: views/questions/ask.php:22
 msgid "Your title must be at least 15 characters in length"
-msgstr "Le titre doit faire au moins 15 caractères"
+msgstr "Le titre doit faire au moins 15 caract&#232;res"
 
 #: views/questions/ask.php:31
 msgid "Your description must be at least 15 characters in length"
-msgstr "La description doit faire au moins 15 caractères"
+msgstr "La description doit faire au moins 15 caract&#232;res"
 
 #: views/questions/ask.php:44
 msgid "What would you like to ask or contribute ?"
@@ -221,7 +237,7 @@ msgstr "Partager un lien"
 
 #: views/questions/ask.php:61
 msgid "Make this a knowledge-base article"
-msgstr "Faire de cette article une référence"
+msgstr "Faire de cette article une r&#233;f&#233;rence"
 
 #: views/questions/cache.php:3
 msgid "Cached Version of"
@@ -233,7 +249,7 @@ msgstr "Editer votre question"
 
 #: views/questions/edit.php:57
 msgid "Update"
-msgstr "Mise à jour"
+msgstr "Mise &#224; jour"
 
 #: views/questions/index.php:1
 msgid "Question"
@@ -247,11 +263,11 @@ msgstr "coms"
 
 #: views/questions/index.php:34
 msgid "ans"
-msgstr "rép"
+msgstr "r&#233;p"
 
 #: views/questions/index.php:70
 msgid "Sorry, we could not find what you were looking for. You may want to have a look at"
-msgstr "Désolé, pas de résultats pour votre recherche. Recherchez par"
+msgstr "D&#233;sol&#233;, pas de r&#233;sultats pour votre recherche. Recherchez par"
 
 #: views/questions/index.php:70
 msgid "tags"
@@ -267,11 +283,11 @@ msgstr "Commentaire"
 
 #: views/questions/view.php:9
 msgid "answer"
-msgstr "Réponse"
+msgstr "R&#233;ponse"
 
 #: views/questions/view.php:9
 msgid "must be atleast 15 characters in length"
-msgstr "doit faire au moins 15 caractères"
+msgstr "doit faire au moins 15 caract&#232;res"
 
 #: views/questions/view.php:31
 #: views/questions/view.php:120
@@ -292,12 +308,12 @@ msgstr[1] "Commentaires"
 #: views/questions/view.php:102
 msgid "Answer"
 msgid_plural "Answers"
-msgstr[0] "Réponse"
-msgstr[1] "Réponses"
+msgstr[0] "R&#233;ponse"
+msgstr[1] "R&#233;ponses"
 
 #: views/questions/view.php:126
 msgid "Accepted Answer"
-msgstr "Réponse validée"
+msgstr "R&#233;ponse valid&#233;e"
 
 #: views/questions/view.php:130
 msgid "Accept this answer"
@@ -309,7 +325,7 @@ msgstr "Pas encore de commentaires"
 
 #: views/questions/view.php:188
 msgid "No answers as yet. Be the first to write an answer."
-msgstr "Pas encore de réponse. Soyez le premier."
+msgstr "Pas encore de r&#233;ponse. Soyez le premier."
 
 #: views/questions/view.php:194
 msgid "Add a comment"
@@ -318,7 +334,7 @@ msgstr "Ajout d'un commentaire"
 #: views/questions/view.php:194
 #: views/questions/view.php:204
 msgid "Answer Question"
-msgstr "Répondre à la question"
+msgstr "R&#233;pondre &#224; la question"
 
 #: views/tags/index.php:1
 #, php-format
@@ -344,7 +360,7 @@ msgstr "Nom"
 
 #: views/users/edit.php:45
 msgid "Leave blank if you do not want to update"
-msgstr "Laisser vide pour ne pas mettre à jour"
+msgstr "Laisser vide pour ne pas mettre &#224; jour"
 
 #: views/users/edit.php:49
 msgid "Update Profile"
@@ -359,7 +375,7 @@ msgstr[1] "%d Utilisateurs"
 
 #: views/users/logout.php:1
 msgid "You have successfully logged out"
-msgstr "Vous êtes déconnecté"
+msgstr "Vous &#234;tes d&#233;connect&#233;"
 
 #: views/users/register.php:33
 msgid "Please enter your password"

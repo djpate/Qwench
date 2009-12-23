@@ -15,7 +15,6 @@ function ask() {
 <link href="$basePathNS/css/wmd.css" type="text/css" rel="stylesheet" />
 
 <script>
- 
 
 $(document).ready(function() {
 	$("#tags").fcbkcomplete({
@@ -25,8 +24,6 @@ $(document).ready(function() {
 	filter_hide: true,
 	newel: true
 	});
-
- 
 
 });
 </script>
@@ -67,8 +64,6 @@ $(document).ready(function() {
 	newel: true
 	});
 
- 
-
 });
 </script>
 
@@ -96,7 +91,6 @@ EOD;
 
 	$template->set('tags',$tags);
 	$template->set('questionid',$questionid);
-
 	
 }
 
@@ -241,8 +235,6 @@ function update() {
 			}					
 		}
 	}
-
-
 	
 	$basePath = basePath();
 	header("Location: $basePath/questions/view/$questionid/$slug");
@@ -265,7 +257,6 @@ function fetchtags() {
 	exit();
 }
 
- 
 function view() {
 	global $path;
 	global $template;
@@ -312,7 +303,6 @@ function view() {
 	
 	$template->set('fave',$fave);
 
-
 	$sql = ("select sum(vote) count from questions_votes where questionid = '".escape($questionid)."'");
 	$query = mysql_query($sql);
 	$result = mysql_fetch_array($query);
@@ -339,8 +329,6 @@ function view() {
 
 	$template->set('nvote',$nvote);
 	$template->set('pvote',$pvote);
-
-
 	
 	$sql = ("select comments.id,comment,comments.userid,users.name username, comments_votes.id voted, comments.votes from comments left join users on comments.userid = users.id left join comments_votes on (comments_votes.commentid = comments.id and comments_votes.userid = '".escape($_SESSION['userid'])."') where type = '0' and typeid = '".escape($questionid)."' order by comments.created asc");
 	$query = mysql_query($sql);
@@ -432,11 +420,8 @@ function view() {
 			$pvote = 1;
 		}
 
-
-
 		$sql_nest = ("select comments.id,comment,comments.userid,users.name username, comments_votes.id voted, comments.votes from comments left join users on comments.userid = users.id left join comments_votes on (comments_votes.commentid = comments.id and comments_votes.userid = '".escape($_SESSION['userid'])."') where type = '1' and typeid = '".escape($result['id'])."' order by comments.created asc");
 		$query_nest = mysql_query($sql_nest);
-
 		 
 		$comments = array();
 		
@@ -470,12 +455,9 @@ EOD;
 
 	$js .= <<<EOD
 
-
-
 <script>
 
 	var basePath = "/qwench/index.php";
-
 
 	function vote(elem,type,voted) {
 		\$this = $(elem);
@@ -552,7 +534,6 @@ EOD;
 			});
 		});
 
-
 	$(".commentfave").click(function() {
 
 		var id = $(this).attr('id');
@@ -584,12 +565,15 @@ EOD;
 			
 		});
 
-
 	});
 
 		$(".commentdel").click(function() {
 
-		var answer = confirm("Delete this comment?")
+		var answer = confirm("
+EOD;
+$js .= _("Delete this comment?");
+$js .= <<<EOD
+")
 		if (answer){
 			var id = $(this).attr('id');
 			\$this = $(this);
@@ -609,7 +593,6 @@ EOD;
 						
 			});
 		}
-
 		
 	});
 
@@ -619,7 +602,15 @@ EOD;
 
 		if (elements > 0) {		
 			$('.viewallcomments',$(this)).css('display','block');
-			$('.viewallcomments a',$(this)).html('View all comments ('+elements+' more)');
+			$('.viewallcomments a',$(this)).html('
+EOD;
+$js .= _("View all comments");
+$js .= <<<EOD
+ ('+elements+' 
+EOD;
+$js .= _("more");
+$js .= <<<EOD
+)');
 		} 
 
 		allComments = $(".comment",$(this)).get();
@@ -639,11 +630,7 @@ EOD;
 			}
 		});
 		$(allComments.slice(5)).hide(); 
-
- 
-
 	}); 
-
 });
 
 function comment(id) {
@@ -655,9 +642,7 @@ $js .= <<<EOD
 }
 
 function addcomment(id) {
-
 		var comment = $("#commenttext_"+id).val();
-
 		if (comment.length < 10) {
 			$.fancyalert('
 EOD;
@@ -822,10 +807,7 @@ function fave() {
 		$query = mysql_query($sql);
 		echo "1"._("Question added to your favorites");
 	}
-
-	
 	exit;
-
 }
 
 function index() {
@@ -836,7 +818,6 @@ function index() {
 	$conditionspost = '';
 	$conditionsselect = '';
 	$extratitle = '';
-
 	
 	$orderby = "newest";
 	$order = 'created desc';
@@ -964,7 +945,5 @@ function index() {
 		$questions[] = array ("title" => $result['title'], "created" => $result['created'], "updated" => $result['updated'], "userid" => $result['userid'], "link" => $result['link'], "slug" => $result['slug'], "answers" => $result['answers'], "accepted" => $result['accepted'], "kb" => $result['kb'], "votes" => $result['votes'], "id" => $result['id'], "tags" => $tags, "description" => $description);
 
 	}
-
-		$template->set('questions',$questions);
-
+	$template->set('questions',$questions);
 }

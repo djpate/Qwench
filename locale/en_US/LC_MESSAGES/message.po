@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qwench\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-23 13:11+0100\n"
+"POT-Creation-Date: 2009-12-23 14:52+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Jérôme <jerome.deville@free.fr>\n"
 "Language-Team: Jerome <jerome.deville@free.fr>\n"
@@ -32,7 +32,7 @@ msgid "You cannot up/down vote your own answer"
 msgstr "You cannot up/down vote your own answer"
 
 #: controllers/answers.php:158
-#: controllers/questions.php:797
+#: controllers/questions.php:782
 msgid "Thankyou for voting"
 msgstr "Thankyou for voting"
 
@@ -41,7 +41,7 @@ msgid "An error has occurred. Please try again later"
 msgstr "An error has occurred. Please try again later"
 
 #: controllers/comments.php:47
-#: controllers/questions.php:727
+#: controllers/questions.php:712
 msgid "Please login to vote"
 msgstr "Please login to vote"
 
@@ -53,51 +53,63 @@ msgstr "You cannot upvote your own comment"
 msgid "Comment successfully deleted"
 msgstr "Comment successfully deleted"
 
-#: controllers/questions.php:652
+#: controllers/questions.php:574
+msgid "Delete this comment?"
+msgstr "Delete this comment?"
+
+#: controllers/questions.php:607
+msgid "View all comments"
+msgstr "View all comments"
+
+#: controllers/questions.php:611
+msgid "more"
+msgstr "more"
+
+#: controllers/questions.php:639
 msgid "Add Comment"
 msgstr "Add comment"
 
-#: controllers/questions.php:664
+#: controllers/questions.php:649
 msgid "Your comment must be atleast 10 characters in length"
 msgstr "Your comment must be atleast 10 characters in length"
 
-#: controllers/questions.php:673
+#: controllers/questions.php:658
 msgid "Your comment is too long, please reduce it to 600 characters"
 msgstr "Your comment is too long, please reduce it to 600 characters"
 
-#: controllers/questions.php:687
+#: controllers/questions.php:672
 msgid "Please login to post a comment"
 msgstr "Please login to post a comment"
 
-#: controllers/questions.php:746
+#: controllers/questions.php:731
 msgid "You cannot up/down vote your own question"
 msgstr "You cannot up/down vote your own question"
 
-#: controllers/questions.php:805
+#: controllers/questions.php:790
 msgid "Please login to add a question to your favorites"
 msgstr "Please login to add a question to your favorites"
 
-#: controllers/questions.php:818
+#: controllers/questions.php:803
 msgid "Question removed from your favorites"
 msgstr "Question removed from your favorites"
 
-#: controllers/questions.php:823
+#: controllers/questions.php:808
 msgid "Question added to your favorites"
 msgstr "Question added to your favorites"
 
-#: controllers/questions.php:883
+#: controllers/questions.php:864
 msgid "not yet answered"
 msgstr "not yet answered"
 
-#: controllers/questions.php:886
+#: controllers/questions.php:867
 msgid "active"
 msgstr "active"
 
-#: controllers/questions.php:901
+#: controllers/questions.php:882
 msgid "showing"
 msgstr "showing"
 
-#: controllers/questions.php:916
+#: controllers/questions.php:897
 msgid "tagged"
 msgstr "tagged"
 
@@ -189,6 +201,10 @@ msgstr "Unanswered"
 #: views/header.php:28
 msgid "Ask or Contribute"
 msgstr "Ask or Contribute"
+
+#: views/answers/edit.php:3
+msgid "Edit Your Answer"
+msgstr "Edit Your Answer"
 
 #: views/answers/edit.php:13
 msgid "Update Answer"

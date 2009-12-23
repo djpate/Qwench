@@ -1,6 +1,6 @@
 <form action="<?php echo generateLink("answers","update");?>" method="post">
 
-<h1>Edit Your Answer</h1>
+<h1><?php echo _("Edit Your Answer"); ?></h1>
 
 <div id="wmd-editor" class="wmd-panel">
 <div id="wmd-button-bar"></div>
