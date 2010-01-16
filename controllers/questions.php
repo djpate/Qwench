@@ -457,7 +457,7 @@ EOD;
 
 <script>
 
-	var basePath = "/qwench/index.php";
+	var basePath = "index.php";
 
 	function vote(elem,type,voted) {
 		\$this = $(elem);
